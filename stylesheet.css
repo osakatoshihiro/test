@@ -1,0 +1,184 @@
+#wrapper{
+  background-color:rgba(0, 255,0,0.1) ;
+  /*width:600px;
+  height: 550px;*/
+  margin: 0 auto;
+}
+
+#inquiry{
+  width: 350px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+
+
+#confirm-btn {
+  display       : inline-block;
+  padding       : 10px 40px;   /* 余白       */
+  margin-left   : 100px;
+  color         : white;     /* 文字色     */
+  border        : none;        /*これを書かなければ、デフォルトで変な線が入る*/
+  /*border: 1px solid #010501;  枠線 */
+  border-radius : 3px;          /* 角丸       */
+  background    : green;     /* 背景色     */
+  opacity       : 0.7;
+  font-size     : 12pt;        /* 文字サイズ */
+  cursor        : pointer;     /* カーソル   */
+  transition    : .3s;         /* なめらか変化 */
+  box-shadow    : 1.5px 4px #054728;  /*原型に影を付ける*/
+  text-align    : center;
+
+}
+
+#modify-btn {
+  display       : inline-block;
+  padding       : 10px 20px;   /* 余白       */
+  margin-top   : 30px;
+  margin-left   : 120px;
+  color         : white;     /* 文字色     */
+  border        : none;        /*これを書かなければ、デフォルトで変な線が入る*/
+  /*border: 1px solid #010501;  枠線 */
+  border-radius : 3px;          /* 角丸       */
+  background    : rgb(138, 139, 138);     /* 背景色     */
+  opacity       : 0.7;
+  font-size     : 8pt;        /* 文字サイズ */
+  cursor        : pointer;     /* カーソル   */
+  transition    : .3s;         /* なめらか変化 */
+  box-shadow    : 1.5px 4px #191b1a;  /*原型に影を付ける*/
+  text-align    : center;
+  height: 30px;
+  vertical-align: top;   /* 上端を揃える */
+}
+
+#submit-btn {
+  display       : inline-block;
+  padding       : 16px 45px 11px 45px;   /* 余白       */
+  margin-top   : 30px;
+  margin-left   : 60px;
+  color         : white;     /* 文字色     */
+  border        : none;        /*これを書かなければ、デフォルトで変な線が入る*/
+  /*border: 1px solid #010501;  枠線 */
+  border-radius : 3px;          /* 角丸       */
+  background    : green;     /* 背景色     */
+  opacity       : 0.7;
+  font-size     : 12pt;        /* 文字サイズ */
+  cursor        : pointer;     /* カーソル   */
+  transition    : .3s;         /* なめらか変化 */
+  box-shadow    : 1.5px 4px #054728;  /*原型に影を付ける*/
+  text-align    : center;
+  vertical-align: top;   /* 上端を揃える */
+  
+}
+
+
+#confirm-btn:hover, #modify-btn:hover, #submit-btn:hover {  /*マウスが乗ったら、透過を無しにする*/
+  opacity: 1;
+}
+
+#confirm-btn:active, #modify-btn:active, #submit-btn:active{  /*マウスクリック時にへこんだように見せる*/
+  box-shadow:none;
+  position:relative;  /*移動させるために書く*/
+  top:2px;            /*トップから下に2px分移動*/
+  left: 0.5px;        /*右に0.5px分移動*/
+  border: none;        /*これを書かなければ、デフォルトで変な線が入る*/
+  outline:none;        /*これを書かなければ、デフォルトで変な線が入る*/
+}
+
+
+.login-modal-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  /* display: none;を追加してください */
+  display: none;
+}
+
+.modal {
+  /*position: absolute;
+  top: 20%;
+  left: 34%;*/
+  position: relative;
+  margin: 40px auto;
+  background-color: #e6ecf0;
+  padding: 20px 50px 40px 50px;
+  width: 550px;
+  height: 450px;
+  overflow: auto; /*高さの指定＋overflow:auto;でモーダル画面にもスクロールバーが表示される*/
+  text-align: left;
+  font-size: 15px;
+  /*overflow-y:scroll;
+  border-radius: 7px;
+  max-height: 3vh;
+  z-index: 10;
+  -webkit-overflow-scrolling: touch;*/
+  
+}
+
+
+
+#boxName, #boxEmail, #boxMessage{
+  font-weight: bold;
+  padding-left: 15px;  
+  word-wrap: break-word;  /*文字列を折り返す（半角英数字にも効く）*/
+  white-space: pre-line;  /*改行を反映させる*/
+
+}
+
+
+
+
+.fa-times {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: rgba(128, 128, 128, 0.46);
+  cursor: pointer;
+}
+
+
+/*
+#submit-btn {
+  display: inline-block;
+  padding: 14px 140px;
+  background-color: #5dca88;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.fa-times {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: rgba(128, 128, 128, 0.46);
+  cursor: pointer;
+}
+
+#signup-form, #login-form {
+  width: 100%;
+}
+
+#signup-form h2, #login-form h2 {
+  color: #5f5d60;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+#signup-form input, #login-form input {
+  width: 320px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  padding: 12px 12px;
+  border: 1px solid #d0d5d8;
+  border-radius: 5px;
+}
+*/
+
